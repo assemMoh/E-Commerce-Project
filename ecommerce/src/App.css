@@ -1,0 +1,31 @@
+body {
+    margin:0;
+    display: relative;
+
+    height: 100vh;
+}
+.img-card, .img-details {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.img-details {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    /* object-position: 0 0 */
+}
+
+.my-footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+

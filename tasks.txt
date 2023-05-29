@@ -1,0 +1,14 @@
+Authentication
+login page
+server-users
+
+cart
+quantities
+admin
+
+server-products
+products page
+design
+footer
+about page
+
