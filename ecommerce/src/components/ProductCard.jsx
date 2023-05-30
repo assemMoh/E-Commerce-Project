@@ -1,6 +1,7 @@
 import React from 'react'
-import { Button, Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
+import './ProdCard.css'
 
 
 export function ProductCard(props) {
@@ -8,7 +9,7 @@ export function ProductCard(props) {
   return (
 
     <div className='col-sm-6 col-md-3 '>
-      <Card className='border border-4 shadow-lg'>
+      <Card className='border border-4 shadow-lg prodcard mt-4'>
         <Card.Body className='p-2 pb-4 '>
           <Card.Img className='img-card' variant="top" src={product.src} />
 
@@ -21,9 +22,10 @@ export function ProductCard(props) {
             <p>Quantity available: {product.quantity}</p>
           </Card.Text>
           <NavLink to={`/products/${product.id}`}>
-            <i className="mx-4 fs-2 text-warning bi bi-eye-fill"            >
-            </i></NavLink>
-          <Button variant="success">Buy Now</Button>
+            <i className="mx-4 fs-2 text-success bi bi-eye-fill mt-5">
+            </i>
+          </NavLink>
+          <button className='cardbtn btn-outline' >Buy Now</button>
         </Card.Body>
       </Card>
     </div>

@@ -1,27 +1,29 @@
 import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Container, Navbar } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
+import './MyNavigation.css'
 
 export function MyNavigation() {
   return (
-    <div className=''>
-      <Navbar bg="dark" variant="dark" >
-        <Container className='p-2' >
-          <Navbar.Brand className='mx-5'>
-          <NavLink className="nav-link" to="/home">Home</NavLink>
+    <div className="navCont">
+      <Navbar bg="danger" variant="dark" className='nav-section'>
+        <h4 className='text-center text-light' style={{ width: '20%' }}>React-Shop.com</h4>
+        <Container className='p-2 col-7'  >
+          <Navbar.Brand className=''>
+            <NavLink className="nav-link" to="/home">Home</NavLink>
           </Navbar.Brand>
-          <Navbar.Brand className='mx-5'>
-          <NavLink className="nav-link" to="/about">About Us</NavLink>
+          <Navbar.Brand className=''>
+            <NavLink className="nav-link" to="/about">About Us</NavLink>
           </Navbar.Brand>
-          <Navbar.Brand className='mx-5'>
-            <NavLink className="nav-link " to="/about">Product</NavLink>
+          <Navbar.Brand className=''>
+            <NavLink className="nav-link " to="/products">Products</NavLink>
           </Navbar.Brand>
-          <Navbar.Brand className="ms-auto mx-3">
-            <NavLink className="nav-link " to="about">Login</NavLink>
+          <Navbar.Brand className="">
+            <NavLink className="nav-link " to="/login">Login</NavLink>
           </Navbar.Brand>
         </Container>
       </Navbar>
-     
+
     </div>
   )
 }

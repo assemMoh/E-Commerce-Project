@@ -3,7 +3,7 @@ import { ProductCard } from './ProductCard'
 import { productAPI } from '../API/productsAPI'
 
 
-export function Products() {
+export function FeaturedProds() {
     let [products, setProducts] = useState([]);
     useEffect(() => {
         retrieveProduct();
@@ -20,11 +20,11 @@ export function Products() {
     let view = false;
     return (
         <div className='p-5 text-center text-ligh mt-5'>
-            <h2 className='text-dark fs-1 mb-5'>Choose From Our Selection</h2>
-            <div className="container-fluid ">
-                <div className="row mx-auto">
-                    {products.map((product) => {
-                        return <ProductCard key={product.id} product={product} show={view} className="border-5" />
+            <h2 className='text-dark fs-1 mb-5'>Featured Products</h2>
+            <div className="container-fluid text-center">
+                <div className="row m-auto">
+                    {products.map((product, index) => {
+                        return index < 4 && <ProductCard key={product.id} product={product} show={view} className="border-5" />
                     })}
                 </div>
             </div>

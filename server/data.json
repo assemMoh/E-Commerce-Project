@@ -1,47 +1,116 @@
-
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Pencils",
-        "price": 10,
-        "quantity": 2500,
-        "src": "https://images.pexels.com/photos/37539/colored-pencils-colour-pencils-mirroring-color-37539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      },
-      {
-        "id": 2,
-        "name": "Pen",
-        "price": 5,
-        "quantity": 3400,
-        "src": "https://images.pexels.com/photos/164645/pexels-photo-164645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      },
-      {
-        "id": 3,
-        "name": "Notebook",
-        "price": 110,
-        "quantity": 2000,
-        "src": "https://images.pexels.com/photos/733854/pexels-photo-733854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      },
-      {
-        "id": 4,
-        "name": "Ruler",
-        "price": 15,
-        "quantity": 2000,
-        "src": "https://images.pexels.com/photos/2714073/pexels-photo-2714073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      },
-      {
-        "id": 5,
-        "name": "Stamp",
-        "price": 120,
-        "quantity": 200,
-        "src": "https://images.pexels.com/photos/3839649/pexels-photo-3839649.jpeg?auto=compress&cs=tinysrgb&w=600"
-      },
-      {
-        "id": 6,
-        "name": "Sticky Notes",
-        "price": 20,
-        "quantity": 1020,
-        "src": "https://images.pexels.com/photos/6991388/pexels-photo-6991388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-     }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Nike Trainers",
+      "price": 850,
+      "quantity": 5,
+      "src": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 2,
+      "name": "Blue x White Shirt",
+      "price": 250,
+      "quantity": 12,
+      "src": "https://images.pexels.com/photos/769749/pexels-photo-769749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr1"
+    },
+    {
+      "id": 3,
+      "name": "Hat",
+      "price": 110,
+      "quantity": 6,
+      "src": "https://images.pexels.com/photos/984619/pexels-photo-984619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 4,
+      "name": "light Hoodie",
+      "price": 300,
+      "quantity": 14,
+      "src": "https://images.pexels.com/photos/6311623/pexels-photo-6311623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 5,
+      "name": "Yellow Sneaks",
+      "price": 120,
+      "quantity": 1,
+      "src": "https://images.pexels.com/photos/12740507/pexels-photo-12740507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 6,
+      "name": "Sunglasses",
+      "price": 170,
+      "quantity": 0,
+      "src": "https://images.pexels.com/photos/249210/pexels-photo-249210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 7,
+      "name": "Fossil Watch",
+      "price": 570,
+      "quantity": 2,
+      "src": "https://images.pexels.com/photos/4513823/pexels-photo-4513823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 8,
+      "name": "Oversized tshirt",
+      "price": 90,
+      "quantity": 8,
+      "src": "https://images.pexels.com/photos/1261422/pexels-photo-1261422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 9,
+      "name": "Yellow Sneaks",
+      "price": 110,
+      "quantity": 8,
+      "src": "https://images.pexels.com/photos/769732/pexels-photo-769732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 10,
+      "name": "Denim Jacket",
+      "price": 170,
+      "quantity": 3,
+      "src": "https://images.pexels.com/photos/9950591/pexels-photo-9950591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 11,
+      "name": "Basic Black T",
+      "price": 100,
+      "quantity": 6,
+      "src": "https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 12,
+      "name": "Circular Glasses",
+      "price": 145,
+      "quantity": 5,
+      "src": "https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 13,
+      "name": "DW",
+      "price": 120,
+      "quantity": 200,
+      "src": "https://images.pexels.com/photos/2494608/pexels-photo-2494608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 14,
+      "name": "Grey Coat",
+      "price": 290,
+      "quantity": 10,
+      "src": "https://images.pexels.com/photos/3651597/pexels-photo-3651597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 15,
+      "name": "Black Boots",
+      "price": 900,
+      "quantity": 3,
+      "src": "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 16,
+      "name": "White Jordans",
+      "price": 700,
+      "quantity": 1,
+      "src": "https://images.pexels.com/photos/1102777/pexels-photo-1102777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ]
 }

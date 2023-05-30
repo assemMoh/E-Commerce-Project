@@ -1,13 +1,13 @@
 import React from 'react'
-import { MyNavigation } from '../components/MyNavigation'
 import { MyCarousel } from '../components/MyCarousel'
-import { Products } from '../components/Products'
+import { FeaturedProds } from '../components/FeaturedProds'
+
 
 export function HomeBody() {
   return (
     <div>
-        <MyCarousel />
-        <Products />
+      <MyCarousel />
+      <FeaturedProds />
     </div>
   )
 }

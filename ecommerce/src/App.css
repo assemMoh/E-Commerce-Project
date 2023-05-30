@@ -1,10 +1,10 @@
 body {
-    margin:0;
-    display: relative;
-
+    margin: 0;
     height: 100vh;
 }
-.img-card, .img-details {
+
+.img-card,
+.img-details {
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -23,9 +23,12 @@ body {
     /* object-position: 0 0 */
 }
 
-.my-footer {
-    width: 100%;
-    position: relative;
-    bottom: 0;
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+.content-wrap {
+    flex: 1;
+}

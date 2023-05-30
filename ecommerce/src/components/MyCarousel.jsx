@@ -2,40 +2,36 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 
 export function MyCarousel() {
-  return (
-    <div>
+    return (
+        <div>
             <Carousel >
                 <Carousel.Item>
                     <img
                         className="d-block carousel-img"
-                        src="https://images.pexels.com/photos/163031/table-wood-record-notebook-163031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="Note Book"
+                        src="https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     />
-                    <Carousel.Caption>
-                        <h3>Note Book</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block carousel-img"
-                        src="https://images.pexels.com/photos/12865963/pexels-photo-12865963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="Office"
+                        src="https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
                     />
-                    <Carousel.Caption>
-                        <h3>Office</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block carousel-img"
-                        src="https://images.pexels.com/photos/3178938/pexels-photo-3178938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="Stationary"
+                        src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
                     />
-                    <Carousel.Caption>
-                        <h3>Stationary</h3>
-                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block carousel-img"
+                        src="https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    />
                 </Carousel.Item>
             </Carousel>
         </div>
-  )
+    )
 }
