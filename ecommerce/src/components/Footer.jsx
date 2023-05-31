@@ -19,8 +19,9 @@ function Footer() {
                     <div className="col ms-5">
                         <h4 className='mt-4 text-light'>Browse</h4>
                         <ul className='list-unstyled'>
-                            <NavLink className="nav-link text-light" to="/home">Home</NavLink>
-                            <NavLink className="nav-link text-light" to="/about">About Us</NavLink>
+                            <NavLink className="nav-link text-light mb-1" to="/home">Home</NavLink>
+                            <NavLink className="nav-link text-light mb-1" to="/about">About Us</NavLink>
+                            <NavLink className="nav-link text-light mb-1" to="/products">Products</NavLink>
                         </ul>
                     </div>
                     {/* column 3 */}

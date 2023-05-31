@@ -2,6 +2,7 @@ Authentication
 login page
 server-users
 
+
 cart
 quantities
 admin
@@ -9,7 +10,6 @@ admin
 server-products *
 products page *
 design *
-footer * 
 Product Details page
 about page 
 

@@ -20,7 +20,7 @@ export function ProductCard(props) {
           </Card.Text>
           <Card.Text className='text-dark'>
             <p>
-              {product.quantity === 1 ? 'One Item Left' : product.quantity === 0 ? 'Out of Stock' : `Quantity available: ${product.quantity}`}
+              {product.quantity === 1 ? 'Only One Item Left' : product.quantity === 0 ? 'Out Of Stock' : `Quantity available: ${product.quantity}`}
             </p>
           </Card.Text>
           <NavLink to={`/products/${product.id}`}>

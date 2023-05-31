@@ -102,14 +102,14 @@
       "id": 15,
       "name": "Black Boots",
       "price": 900,
-      "quantity": 3,
+      "quantity": 0,
       "src": "https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": 16,
       "name": "White Jordans",
       "price": 700,
-      "quantity": 0,
+      "quantity": 2,
       "src": "https://images.pexels.com/photos/1102777/pexels-photo-1102777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {

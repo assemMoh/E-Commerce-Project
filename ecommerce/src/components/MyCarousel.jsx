@@ -31,6 +31,12 @@ export function MyCarousel() {
                         src="https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     />
                 </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block carousel-img"
+                        src="https://images.pexels.com/photos/3892369/pexels-photo-3892369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=11"
+                    />
+                </Carousel.Item>
             </Carousel>
         </div>
     )
