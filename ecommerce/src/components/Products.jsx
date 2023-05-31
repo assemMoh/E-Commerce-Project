@@ -23,8 +23,8 @@ export function Products() {
             <h2 className='text-dark fs-1 mb-5'>Choose From Our Selection</h2>
             <div className="container-fluid ">
                 <div className="row mx-auto">
-                    {products.map((product) => {
-                        return <ProductCard key={product.id} product={product} show={view} className="border-5" />
+                    {products.map((product, index) => {
+                        return index >= 4 && <ProductCard key={product.id} product={product} show={view} className="border-5" />
                     })}
                 </div>
             </div>

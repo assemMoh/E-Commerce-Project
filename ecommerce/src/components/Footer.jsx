@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import './Footer.css'
+import '../css/Footer.css'
 function Footer() {
     return (
         <div className="main-footer ">
@@ -8,7 +8,7 @@ function Footer() {
                 <div className="row ">
                     {/* column 1 */}
                     <div className="col ms-5">
-                        <h4 className='mt-4 text-light'>REACT SHOP.COM</h4>
+                        <h4 className='mt-4 text-light'>REACT-STORE.COM</h4>
                         <ul className='list-unstyled text-light'>
                             <li>+(20)1111111111</li>
                             <li>Cairo, Egypt</li>
@@ -53,10 +53,10 @@ function Footer() {
                         </ul>
                     </div>
                 </div>
-                <hr />
+                <hr style={{ color: 'white' }} />
                 <div className='row'>
                     <p className='col-xs text-center pb-2 text-light'>
-                        &copy;{new Date().getFullYear()} REACT SHOP.com | All Rights Reserved </p>
+                        &copy;{new Date().getFullYear()} REACT-STORE.com | All Rights Reserved </p>
 
                 </div>
             </div>

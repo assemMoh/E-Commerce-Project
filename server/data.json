@@ -86,16 +86,16 @@
     },
     {
       "id": 13,
-      "name": "DW",
+      "name": "DW Watch",
       "price": 120,
-      "quantity": 200,
+      "quantity": 1,
       "src": "https://images.pexels.com/photos/2494608/pexels-photo-2494608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": 14,
       "name": "Grey Coat",
       "price": 290,
-      "quantity": 10,
+      "quantity": 0,
       "src": "https://images.pexels.com/photos/3651597/pexels-photo-3651597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
@@ -109,8 +109,36 @@
       "id": 16,
       "name": "White Jordans",
       "price": 700,
-      "quantity": 1,
+      "quantity": 0,
       "src": "https://images.pexels.com/photos/1102777/pexels-photo-1102777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 17,
+      "name": "Olive Chinos",
+      "price": 205,
+      "quantity": 1,
+      "src": "https://images.pexels.com/photos/4066289/pexels-photo-4066289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 18,
+      "name": "Air Force",
+      "price": 700,
+      "quantity": 1,
+      "src": "https://images.pexels.com/photos/2048548/pexels-photo-2048548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 19,
+      "name": "Short Sleeve T",
+      "price": 90,
+      "quantity": 11,
+      "src": "https://images.pexels.com/photos/733505/pexels-photo-733505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 20,
+      "name": "Black Denim",
+      "price": 200,
+      "quantity": 12,
+      "src": "https://images.pexels.com/photos/4065148/pexels-photo-4065148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ]
 }

@@ -6,9 +6,10 @@ cart
 quantities
 admin
 
-server-products
-products page
-design
-footer
-about page
+server-products *
+products page *
+design *
+footer * 
+Product Details page
+about page 
 

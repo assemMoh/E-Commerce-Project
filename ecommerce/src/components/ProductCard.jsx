@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
-import './ProdCard.css'
+import '../css/ProdCard.css'
 
 
 export function ProductCard(props) {
@@ -18,16 +18,23 @@ export function ProductCard(props) {
           <Card.Text>
             Price : {product.price}
           </Card.Text>
-          <Card.Text className='text-muted'>
-            <p>Quantity available: {product.quantity}</p>
+          <Card.Text className='text-dark'>
+            <p>
+              {product.quantity === 1 ? 'One Item Left' : product.quantity === 0 ? 'Out of Stock' : `Quantity available: ${product.quantity}`}
+            </p>
           </Card.Text>
           <NavLink to={`/products/${product.id}`}>
-            <i className="mx-4 fs-2 text-success bi bi-eye-fill mt-5">
+            <i className="mx-5 fs-2 bi bi-eye-fill ms-1">
             </i>
           </NavLink>
-          <button className='cardbtn btn-outline' >Buy Now</button>
+          <button className='cardbtn btn-outline' disabled={product.quantity == 0}>
+            {product.quantity == 0 ? 'Out Of Stock' : 'Add To Cart'}
+          </button>
+
         </Card.Body>
       </Card>
     </div>
   )
 }
+
+
