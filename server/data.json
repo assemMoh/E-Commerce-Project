@@ -11,7 +11,7 @@
       "id": 2,
       "name": "Blue x White Shirt",
       "price": 250,
-      "quantity": 12,
+      "quantity": "15",
       "src": "https://images.pexels.com/photos/769749/pexels-photo-769749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr1"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "id": 5,
-      "name": "Yellow Sneaks",
+      "name": "Yellow Sneakers",
       "price": 120,
       "quantity": 1,
       "src": "https://images.pexels.com/photos/12740507/pexels-photo-12740507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
