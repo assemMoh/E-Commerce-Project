@@ -30,7 +30,7 @@
     },
     {
       "id": 5,
-      "name": "Yellow Sneaks",
+      "name": "Yellow Sneakers",
       "price": 120,
       "quantity": 1,
       "src": "https://images.pexels.com/photos/12740507/pexels-photo-12740507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -140,5 +140,9 @@
       "quantity": 12,
       "src": "https://images.pexels.com/photos/4065148/pexels-photo-4065148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
-  ]
+  ],
+  "admins": {
+    "username": "root",
+    "password": "root"
+  }
 }
