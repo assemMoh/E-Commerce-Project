@@ -1,17 +1,18 @@
 import axios from "axios";
 
-let baseURL = "http://localhost:3005/products";
+let productURL = "http://localhost:3005/products";
+let usersURL = "http://localhost:3005/users";
 
-let getAllProduct = () => axios.get(baseURL);
+let getAllProduct = () => axios.get(productURL);
 
-let getProduct = (productId) => axios.get(`${baseURL}/${productId}`);
+let getProduct = (productId) => axios.get(`${productURL}/${productId}`);
 
-let addProduct = (product) => axios.post(baseURL, product);
+let addProduct = (product) => axios.post(productURL, product);
 
-let deleteProduct = (productId) => axios.delete(`${baseURL}/${productId}`);
+let deleteProduct = (productId) => axios.delete(`${productURL}/${productId}`);
 
 let editProduct = (productId, product) =>
-	axios.put(`${baseURL}/${productId}`, product);
+	axios.put(`${productURL}/${productId}`, product);
 
 export let productAPI = {
 	getAllProduct,
@@ -20,3 +21,6 @@ export let productAPI = {
 	editProduct,
 	getProduct,
 };
+
+export let registerUser = (newUser) => axios.post(`${usersURL}`, newUser)
+export let getUsers = () => axios.get(usersURL)

@@ -32,3 +32,7 @@ body {
 .content-wrap {
     flex: 1;
 }
+
+.inputError{
+    border-color: rgb(255, 3, 3)
+}

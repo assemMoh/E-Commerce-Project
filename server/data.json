@@ -140,5 +140,25 @@
       "quantity": 12,
       "src": "https://images.pexels.com/photos/4065148/pexels-photo-4065148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
+  ],
+  "users": [
+    {
+      "username": "assem",
+      "email": "assem@asd.com",
+      "password": "22qqA",
+      "id": 1
+    },
+    {
+      "username": "mahmoud",
+      "email": "mahmoud@gmail.com",
+      "password": "22qqA",
+      "id": 2
+    },
+    {
+      "username": "okay",
+      "email": "okay@okay.com",
+      "password": "2Assem",
+      "id": 3
+    }
   ]
 }
