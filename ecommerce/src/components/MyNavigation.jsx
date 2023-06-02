@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Navbar } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import '../css/MyNavigation.css'
+import { CartItem } from './CartItem'
 
 export function MyNavigation() {
   return (
@@ -17,6 +18,11 @@ export function MyNavigation() {
           </Navbar.Brand>
           <Navbar.Brand className=''>
             <NavLink className="nav-link " to="/products">Products</NavLink>
+          </Navbar.Brand>
+          <Navbar.Brand className="">
+            <NavLink className="nav-link " to="/login">
+              <CartItem></CartItem>
+            </NavLink>
           </Navbar.Brand>
           <Navbar.Brand className="">
             <NavLink className="nav-link " to="/login">Login</NavLink>

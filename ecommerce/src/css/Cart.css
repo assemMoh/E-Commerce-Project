@@ -1,0 +1,24 @@
+
+.cart {
+    position: relative;
+    border-radius: 50px;
+    border: solid 1px white;
+    padding: 0.3rem;
+    margin: 0;
+}
+
+.counter-holder {
+    position: absolute;
+    left:50%;
+    background-color: yellow;
+    color:red;
+    padding: 0rem 0.4rem;
+    border-radius: 50px;
+}
+
+.counter{
+    padding: 0;
+    margin: 0;
+    font-weight: 900;
+    font-size:0.8rem;
+}
