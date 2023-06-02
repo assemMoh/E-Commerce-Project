@@ -5,7 +5,7 @@ import { NotFound } from './NotFound';
 import axios from 'axios';
 import '../css/ProductDetails.css';
 
-export function ProductDetails() {
+export function ProductDetailsAdmin() {
 
   let { id } = useParams();
   let navigate = useNavigate();
@@ -22,13 +22,13 @@ export function ProductDetails() {
 
   let backToProducts = () => {
     navigate(
-      '/products'
+      '/admin/panel'
     )  }
 
 
     if (product == []) {
     navigate(
-      '/products'
+      '/admin/panel'
     )
     return <NotFound />
   }

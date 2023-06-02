@@ -14,7 +14,7 @@ let deleteProduct = (productId) => axios.delete(`${baseURL}/${productId}`);
 let editProduct = (productId, product) =>
 	axios.put(`${baseURL}/${productId}`, product);
 
-let getAdmin = () => axios.get(`${adminURL}/${1}`);
+let getAllAdmins = () => axios.get(adminURL);
 
 export let productAPI = {
 	getAllProduct,
@@ -22,5 +22,5 @@ export let productAPI = {
 	deleteProduct,
 	editProduct,
 	getProduct,
-	getAdmin,
+	getAllAdmins,
 };

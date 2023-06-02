@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Nike Trainers",
       "price": 850,
-      "quantity": 5,
+      "quantity": "1",
       "src": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
@@ -141,8 +141,10 @@
       "src": "https://images.pexels.com/photos/4065148/pexels-photo-4065148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ],
-  "admins": {
-    "username": "root",
-    "password": "root"
-  }
+  "admins": [
+    {
+      "email": "root@root.com",
+      "password": "root"  
+    }
+  ]
 }

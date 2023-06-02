@@ -23,12 +23,12 @@ export function ProductForm() {
 			axios
 				.post("http://localhost:3005/products", formValues)
 				.then((response) => {
-					navigate("/admin");
+					navigate("/admin/panel");
 				});
 		} else {
 			// edit
 			axios.put(`http://localhost:3005/products/${id}`, formValues).then(() => {
-				navigate("/admin");
+				navigate("/admin/panel");
 			});
 		}
 	};
@@ -53,7 +53,7 @@ useEffect(() => {
 }, []);
 
 let getToProducts = () => {
-	navigate("/admin");
+	navigate("/admin/panel");
 }
 return (
 	<div className='container mt-5 pt-5 alert alert-secondary p-5'>
