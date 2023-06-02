@@ -8,6 +8,10 @@ i {
     left: 20px
 }
 
+.cardicon:disabled {
+    color: green
+}
+
 
 .prodcard:hover {
     transform: translateY(-12px);
@@ -34,4 +38,8 @@ i {
 .cardbtn:hover {
     background-image: linear-gradient(135deg, #5EFCE8 10%, #736EFE 100%);
     color: #ffffff;
+}
+
+.cardbtn:disabled {
+    background-image: linear-gradient(135deg, #545757 10%, #3a3a41 100%);
 }

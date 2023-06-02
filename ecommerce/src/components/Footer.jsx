@@ -7,7 +7,7 @@ function Footer() {
             <div className='container '>
                 <div className="row ">
                     {/* column 1 */}
-                    <div className="col ms-5">
+                    <div className="col-sm-12 col-md-6 col-lg-3 ms-5">
                         <h4 className='mt-4 text-light'>REACT-STORE.COM</h4>
                         <ul className='list-unstyled text-light'>
                             <li>+(20)1111111111</li>
@@ -16,7 +16,7 @@ function Footer() {
                         </ul>
                     </div>
                     {/* column 2 */}
-                    <div className="col ms-5">
+                    <div className="col-sm-12 col-md-6 col-lg-3 ms-5">
                         <h4 className='mt-4 text-light'>Browse</h4>
                         <ul className='list-unstyled'>
                             <NavLink className="nav-link text-light mb-1" to="/home">Home</NavLink>
@@ -25,11 +25,11 @@ function Footer() {
                         </ul>
                     </div>
                     {/* column 3 */}
-                    <div className="col ms-5 ">
+                    <div className="col-sm-12 col-md-6 col-lg-3 ms-5 ">
                         <h4 className='mt-4 text-light'>Follow Us</h4>
                         <ul className='list-unstyled container'>
                             <div className="row">
-                                <li classname='mt-3'>
+                                <li className='mt-3'>
                                     <a href="https://www.facebook.com" target='_blank' style={{ textDecoration: 'none', color: 'white' }} >
                                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16">
                                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
