@@ -8,7 +8,7 @@ export function MyNavigation() {
     <div className="navCont">
       <Navbar bg="danger" variant="dark" className='nav-section'>
         <h4 className='text-center text-light' style={{ width: '20%' }}>React-Store.com</h4>
-        <Container className='p-2 col-7'  >
+        <Container className='p-2 col-5'  >
           <Navbar.Brand className=''>
             <NavLink className="nav-link" to="/home">Home</NavLink>
           </Navbar.Brand>

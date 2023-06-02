@@ -8,7 +8,7 @@ export function ProductCard(props) {
   let { product } = props
   return (
 
-    <div className='col-sm-6 col-md-3 '>
+    <div className='col-sm-12 col-md-6 col-lg-3 '>
       <Card className='border border-4 shadow-lg prodcard mt-4'>
         <Card.Body className='p-2 pb-4 '>
           <Card.Img className='img-card' variant="top" src={product.src} />

@@ -3,11 +3,11 @@ import Carousel from 'react-bootstrap/Carousel';
 
 export function MyCarousel() {
     return (
-        <div>
-            <Carousel >
+        <div className="col-12">
+            <Carousel className="col-12">
                 <Carousel.Item>
                     <img
-                        className="d-block carousel-img"
+                        className="d-block carousel-img "
                         src="https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     />
                 </Carousel.Item>

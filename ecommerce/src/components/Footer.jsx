@@ -7,7 +7,7 @@ function Footer() {
             <div className='container '>
                 <div className="row ">
                     {/* column 1 */}
-                    <div className="col ms-5">
+                    <div className="col-sm-12 col-md-6 col-lg-3 ms-5">
                         <h4 className='mt-4 text-light'>REACT-STORE.COM</h4>
                         <ul className='list-unstyled text-light'>
                             <li>+(20)1111111111</li>
@@ -16,7 +16,7 @@ function Footer() {
                         </ul>
                     </div>
                     {/* column 2 */}
-                    <div className="col ms-5">
+                    <div className="col-sm-12 col-md-6 col-lg-3 ms-5">
                         <h4 className='mt-4 text-light'>Browse</h4>
                         <ul className='list-unstyled'>
                             <NavLink className="nav-link text-light mb-1" to="/home">Home</NavLink>
@@ -25,7 +25,7 @@ function Footer() {
                         </ul>
                     </div>
                     {/* column 3 */}
-                    <div className="col ms-5 ">
+                    <div className="col-sm-12 col-md-6 col-lg-3 ms-5 ">
                         <h4 className='mt-4 text-light'>Follow Us</h4>
                         <ul className='list-unstyled container'>
                             <div className="row">
