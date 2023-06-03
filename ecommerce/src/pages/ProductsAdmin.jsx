@@ -96,7 +96,7 @@ export function ProductsAdmin() {
                     </tbody>
                 </Table>
             </div>
-        </div >
+        </div>
         // <div className='p-5 text-center text-ligh mt-5'>
         //     <h2 className='text-dark fs-1 mb-5'>Choose From Our Selection</h2>
         //     <div className="container-fluid ">

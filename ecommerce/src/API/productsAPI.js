@@ -1,10 +1,9 @@
 import axios from "axios";
 
 let productURL = "http://localhost:3005/products";
-let usersURL = "http://localhost:3005/users";
+let adminURL = "http://localhost:3005/admins";
 
 // let baseURL = "http://localhost:3005/products";
-let adminURL = "http://localhost:3005/admins";
 
 let getAllProduct = () => axios.get(productURL);
 
@@ -28,5 +27,14 @@ export let productAPI = {
 	getAllAdmins,
 };
 
+
+let usersURL = "http://localhost:3005/users";
+
 export let registerUser = (newUser) => axios.post(`${usersURL}`, newUser)
 export let getUsers = () => axios.get(usersURL)
+
+
+let currentUserURL = "http://localhost:3005/currentUser";
+export let loginUser = (currentUser) => axios.post(currentUserURL, currentUser)
+export let getCurrentUser = () => axios.get(currentUserURL + "/1")
+export let logoutUser = (currentUser) => axios.delete(currentUserURL + "/1", currentUser)

@@ -159,12 +159,26 @@
       "email": "okay@okay.com",
       "password": "2Assem",
       "id": 3
+    },
+    {
+      "username": "oh",
+      "email": "oh@ho.com",
+      "password": "33wwA",
+      "id": 4
+    },
+    {
+      "username": "user",
+      "email": "user@user.user",
+      "password": "22qqA",
+      "id": 5
     }
   ],
   "admins": [
     {
       "email": "root@root.com",
-      "password": "root"  
+      "password": "root",
+      "signed": "off"
     }
-  ]
+  ],
+  "currentUser": []
 }

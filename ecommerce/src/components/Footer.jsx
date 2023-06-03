@@ -1,7 +1,36 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
+import React, { useEffect } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom';
 import '../css/Footer.css'
+import { getCurrentUser } from '../API/productsAPI';
 function Footer() {
+
+    let nav = useNavigate()
+
+    let productPass = '/products'
+    let productFail = '/login'
+    let AboutPass = '/aboutuser'
+    let AboutFail = '/about'
+
+    let checkUserPro = () => {
+        try{
+           getCurrentUser().then((user) => {
+                nav('/products')
+           }).catch(() => {nav('/login')});
+        }catch(e){
+            console.log(e)
+        }
+    }
+    let checkUserAb = () => {
+        try{
+           getCurrentUser().then((user) => {
+                nav('/aboutuser')
+           }).catch(() => {nav('/about')});
+        }catch(e){
+            console.log(e)
+        }
+    }
+
+
     return (
         <div className="main-footer ">
             <div className='container '>
@@ -20,8 +49,8 @@ function Footer() {
                         <h4 className='mt-4 text-light'>Browse</h4>
                         <ul className='list-unstyled'>
                             <NavLink className="nav-link text-light mb-1" to="/home">Home</NavLink>
-                            <NavLink className="nav-link text-light mb-1" to="/about">About Us</NavLink>
-                            <NavLink className="nav-link text-light mb-1" to="/products">Products</NavLink>
+                            <NavLink className="nav-link text-light mb-1" onClick={checkUserAb}>About Us</NavLink>
+                            <NavLink className="nav-link text-light mb-1" onClick={checkUserPro}>Products</NavLink>
                         </ul>
                     </div>
                     {/* column 3 */}

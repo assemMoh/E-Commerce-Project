@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { ProductCard } from '../components/ProductCard'
 import { productAPI } from '../API/productsAPI'
+import { useNavigate } from 'react-router-dom';
 
 
 export function Products() {
+
     let [products, setProducts] = useState([]);
     useEffect(() => {
         retrieveProduct();
@@ -18,9 +20,11 @@ export function Products() {
         }
     };
     let view = false;
+
+
     return (
-        <div className='p-5 text-center text-ligh mt-5'>
-            <h2 className='text-dark fs-1 mb-5'>Choose From Our Selection</h2>
+         <div className='p-5 text-center text-ligh mt-5'>
+            {}<h2 className='text-dark fs-1 mb-5'>Choose From Our Selection</h2>
             <div className="container-fluid ">
                 <div className="row mx-auto">
                     {products.map((product, index) => {

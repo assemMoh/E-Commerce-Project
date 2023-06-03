@@ -5,7 +5,13 @@ import '../css/MyNavigation.css'
 import { CartItem } from './CartItem'
 
 export function MyNavigation() {
+
+
+  
+
+
   return (
+
     <div className="navCont">
       <Navbar bg="danger" variant="dark" className='nav-section'>
         <h4 className='text-center text-light' style={{ width: '20%' }}>React-Store.com</h4>
@@ -20,16 +26,11 @@ export function MyNavigation() {
             <NavLink className="nav-link" to="/about">About Us</NavLink>
           </Navbar.Brand>
           <Navbar.Brand className="">
-            <NavLink className="nav-link " to="/login">
-              <CartItem></CartItem>
-            </NavLink>
-          </Navbar.Brand>
-          <Navbar.Brand className="">
             <NavLink className="nav-link " to="/login">Login</NavLink>
           </Navbar.Brand>
         </Container>
       </Navbar>
-
     </div>
+    
   )
 }

@@ -8,20 +8,20 @@ export function MyCarousel() {
                 <Carousel.Item>
                     <img
                         className="d-block carousel-img "
-                        src="https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block carousel-img"
                         src="https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block carousel-img"
                         src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block carousel-img"
+                        src="https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 
                     />
                 </Carousel.Item>

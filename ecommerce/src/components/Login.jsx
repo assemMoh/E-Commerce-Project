@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, NavLink } from 'react-router-dom'
-import { getUsers } from '../API/productsAPI'
+import { getCurrentUser, getUsers, loginUser } from '../API/productsAPI'
 import { useFormik } from 'formik'
 
 export function Login() {
-    
+    let nav = useNavigate()
     let [usersInfo, setUsersInfo] = useState([])
-    let [registeredUser, setRegisteredUser] = useState(false)
+    let [logged, setLogged] = useState(false)
     let [loginTrial, setLoginTrial] = useState(false)
     let {values, handleChange} = useFormik({
         initialValues: {
@@ -16,20 +16,32 @@ export function Login() {
     })
     
     
-    let searchUser = (user) => {
+    let searchUser = async (user) => {
+        // console.log(user)
         if (values.username == user.username && values.password == user.password) 
-            setRegisteredUser(true)
-    }
-    
+            {
+                setTimeout(() => {
+                    try{
+                        let {username, password, email} = user
+                        let userData = {username, password, email}
+                        loginUser(userData)
+                        nav('/products')
+                    }catch(e){
+                        console.log(e)
+                    }
+                }, 400);
+            }
+        }
+        
     let checkIfFound = (e) => {
+        setLoginTrial(false)
         e.preventDefault()
         usersInfo.map(searchUser)
-        if (!registeredUser)
+        setTimeout(() => {
             setLoginTrial(true)
-        else
-            setLoginTrial(false)
+        }, 500);
+
     }
-    
     
     
     let retreiveUsers = async () => {
@@ -41,13 +53,21 @@ export function Login() {
         }
     }
     useEffect(() => {
-        retreiveUsers()
+        try{
+            getCurrentUser().then((user) =>{
+                console.log("already logged in")
+                setLogged(true)
+            }).catch((err) => {retreiveUsers()})
+        }catch(e){
+            console.log("error occured during fetching")
+        }
+        // retreiveUsers()
     },[])
 
   return (
-    <div className=' my-5 p-5 w-25 m-auto bg-light'>
+    <div className='my-5 p-5 w-25 m-auto bg-light'>
         <form autoComplete='off'>
-            <div class="mb-3">
+            <div className="mb-3">
                 <label for="username" >Username</label>
                 <input type="username" id="username"
                 value={values.username}
@@ -57,7 +77,7 @@ export function Login() {
             </div>
 
 
-            <div class="mb-3">
+            <div className="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password"
                 value={values.password}
@@ -67,10 +87,14 @@ export function Login() {
             </div>
             
             
-            
             <div className='container text-center'>
                 {loginTrial && (<label className='text-danger my-3'>Invalid username or password</label>)}
-                <button onClick={checkIfFound} class="btn btn-primary w-50 text-center">Login</button>
+                {logged && <p>Already Logged in</p>}
+                <button onClick={checkIfFound}
+                disabled={logged}
+                className="btn btn-primary w-50 text-center">
+                    Login
+                </button>
             </div>
             </form>
             <hr/>

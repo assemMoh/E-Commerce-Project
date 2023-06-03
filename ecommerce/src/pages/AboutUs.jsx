@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/About.css'
 
-function AboutUs() {
+export function AboutUs() {
   return (
     <div className="container abtcontainer mt-4 mb-4 ">
       <div className="row ">
@@ -22,5 +22,4 @@ function AboutUs() {
   );
 };
 
-export default AboutUs;
 
