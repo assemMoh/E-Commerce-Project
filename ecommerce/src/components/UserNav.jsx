@@ -6,7 +6,7 @@ import { getCurrentUser, logoutUser } from '../API/productsAPI'
 
 export function UserNav() {
 
-    
+
     let nav = useNavigate()
     let [currentUser, setCurrentUser] = useState({})
     let [loggingOut, setLoggingOut] = useState(false)
@@ -20,26 +20,25 @@ export function UserNav() {
             
             nav('/home')
         }, 1000);
-        
     }
 
 
     let checkUser = async () => {
-        try{
-           await getCurrentUser().then((user) => {
-            setCurrentUser(user.data)
-           }).catch(() => {nav('/login')})
-        }catch(e){
+        try {
+            await getCurrentUser().then((user) => {
+                setCurrentUser(user.data)
+            }).catch(() => { nav('/login') })
+        } catch (e) {
             console.log(e)
         }
     }
 
     useEffect(() => {
         checkUser()
-    },[])
+    }, [])
 
 
-  return (
+    return (
         <div className="navCont">
             <Navbar bg="danger" variant="dark" className='nav-section'>
                 <NavLink to='/home'
@@ -47,8 +46,8 @@ export function UserNav() {
                 </NavLink>
                 <Container className='p-2 justify-content-end col-7'>
                     <Navbar.Brand className="">
-                        <NavLink className="nav-link " to="/login">
-                        <CartItem></CartItem>
+                        <NavLink className="nav-link " to="/cart">
+                            <CartItem></CartItem>
                         </NavLink>
                     </Navbar.Brand>
                     <Navbar.Brand className="">
@@ -66,6 +65,6 @@ export function UserNav() {
                 </Container>
             </Navbar>
 
-    </div>
-  )
+        </div>
+    )
 }
