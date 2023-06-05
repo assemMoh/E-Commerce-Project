@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import '../css/Login.css'
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { getCurrentAdmin, productAPI } from "../API/productsAPI";
+import { getCurrentAdmin, loginAdmin, productAPI } from "../API/productsAPI";
 import { useNavigate } from "react-router-dom";
 
 // Creating schema
@@ -19,9 +19,16 @@ const schema = Yup.object().shape({
 export function LoginAdmin() {
     let navigate = useNavigate();
     let [admins, setAdmins] = useState([]);
+    let [newLoggedAdmin, setNewLoggedAdmin] = useState({});
     let [signedIn, setSignedIn] = useState(false);
 
-    let goToPanel = () => {
+    let goToPanel = (currentAdmin) => {
+        try{
+            loginAdmin(currentAdmin)
+        }catch(e){
+
+        }
+        console.log(currentAdmin)
         navigate(
             '/admin/panel'
         )
@@ -34,7 +41,11 @@ export function LoginAdmin() {
 
     let checkAdmin = async () => {
         try{
-            await getCurrentAdmin().then((admin) => {setSignedIn(true)})
+            await getCurrentAdmin().then((admin) => {
+                setSignedIn(true)
+                navigate('/admin/panel')
+                console.log(admin)
+            })
             .catch(() => {retrieveAdmins()})
         }catch(e){
             console.log();
@@ -65,8 +76,9 @@ return (
                     // console.log((admins))
 
                     if (values['email'] === admin['email'] && values['password'] === admin['password']) {
+                        {}
                         console.log(admin)
-                        goToPanel();
+                        goToPanel(admin);
                     }
                 }
 
@@ -87,14 +99,14 @@ return (
                             <h3>Admin login</h3>
                             {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
                             <div className="my-5">
-                                <p className="">Username</p>
+                                <p className="">Email</p>
                                 <input
                                     type="email"
                                     name="email"
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     value={values.email}
-                                    placeholder="Enter email id / username"
+                                    // placeholder="Enter email"
                                     className="form-control inp_text"
                                     id="email"
                                 />
@@ -112,7 +124,7 @@ return (
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     value={values.password}
-                                    placeholder="Enter password"
+                                    // placeholder="Enter password"
                                     className="form-control"
                                 />
                                 {/* If validation is not passed show errors */}
