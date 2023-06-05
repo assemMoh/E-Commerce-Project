@@ -57,7 +57,9 @@ export function Login() {
             getCurrentUser().then((user) =>{
                 console.log("already logged in")
                 setLogged(true)
-            }).catch((err) => {retreiveUsers()})
+            }).catch((err) => {
+                //retreiveUsers()
+            })
         }catch(e){
             console.log("error occured during fetching")
         }

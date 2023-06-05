@@ -23,11 +23,14 @@ export function UserNav() {
     }
 
 
-    let checkUser = async () => {
+    let checkUser = () => {
         try {
-            await getCurrentUser().then((user) => {
+            getCurrentUser().then((user) => {
                 setCurrentUser(user.data)
-            }).catch(() => { nav('/login') })
+            }).catch((e) => { 
+                console.log(e)
+                nav('/login') 
+            })
         } catch (e) {
             console.log(e)
         }
