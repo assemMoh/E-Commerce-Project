@@ -20,6 +20,7 @@ import { ProductDetailsPage } from './pages/ProductDetailsPage';
 import { ProductsAdminPage } from './pages/ProductsAdminPage';
 import { ProductDetailsAdminPage } from './pages/ProductDetailsAdminPage';
 import { ProductFormPage } from './pages/ProductFormPage';
+import CartPage from './pages/CartPage';
 
 
 
@@ -28,10 +29,10 @@ function App() {
     <div className="page-container ">
       <div className="content-wrap">
         <Routes>
-          
+
           <Route path='/' element={<HomeBody />} />
           <Route path='home' element={<HomeBody />} />
-          
+
           <Route path='login' element={<LoginPage />} />
           <Route path='register' element={<RegisterPage />} />
 
@@ -40,18 +41,19 @@ function App() {
 
           <Route path='about' element={<AboutPage />} />
           <Route path='aboutuser' element={<AboutPageUser />} />
-          
+
+          <Route path='cart' element={<CartPage />} />
 
           <Route path='admin' element={<LoginAdmin />} />
           <Route path='admin/panel' element={<ProductsAdminPage />} />
           <Route path='admin/panel/:id' element={<ProductDetailsAdminPage />} />
           <Route path='admin/panel/:id/edit' element={<ProductFormPage />} />
-        
+
           <Route path='*' element={<NotFound />} />
 
         </Routes>
-    <Footer />
-    </div>
+        <Footer />
+      </div>
     </div>
   );
 }
