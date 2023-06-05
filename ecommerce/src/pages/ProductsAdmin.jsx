@@ -27,10 +27,9 @@ export function ProductsAdmin() {
         }
     };
     let deleteProduct = async (productId) => {
-        
         try {
             console.log( myFunction())
-            // await productAPI.deleteProduct(productId);
+            await productAPI.deleteProduct(productId);
             retrieveProduct();
         } catch (error) {
             console.log(error);

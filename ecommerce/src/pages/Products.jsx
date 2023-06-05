@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ProductCard } from '../components/ProductCard'
 import { productAPI } from '../API/productsAPI'
-import { useNavigate } from 'react-router-dom';
 
 
 export function Products() {
