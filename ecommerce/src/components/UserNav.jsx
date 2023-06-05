@@ -28,11 +28,11 @@ export function UserNav() {
             getCurrentUser().then((user) => {
                 setCurrentUser(user.data)
             }).catch((e) => { 
-                console.log(e)
+                // console.log(e)
                 nav('/login') 
             })
         } catch (e) {
-            console.log(e)
+            // console.log(e)
         }
     }
 
@@ -50,6 +50,9 @@ export function UserNav() {
                     className='m-auto nav-link fs-3 text-light' style={{ width: '20%' }}>React-Store.com
                 </NavLink>
                 <Container className='p-2 justify-content-end col-7'>
+                    <Navbar.Brand className="">
+                        <NavLink className="nav-link text-light" to='/products' >Products</NavLink>
+                    </Navbar.Brand>
                     <Navbar.Brand className="">
                         <NavLink className="nav-link " to="/cart">
                             <CartItem></CartItem>

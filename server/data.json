@@ -189,6 +189,13 @@
         1
       ],
       "id": 5
+    },
+    {
+      "username": "hatem",
+      "email": "hatem@gmail.com",
+      "password": "22qqA",
+      "cart": [],
+      "id": 6
     }
   ],
   "currentUser": [],
@@ -199,5 +206,11 @@
       "id": 1
     }
   ],
-  "currentAdmin": []
+  "currentAdmin": [
+    {
+      "email": "root@root.com",
+      "password": "root",
+      "id": 1
+    }
+  ]
 }

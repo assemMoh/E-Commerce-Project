@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { getCurrentUser } from '../API/productsAPI'
 import '../css/Cart.css';
+import { useNavigate } from 'react-router-dom';
 
 export function CartItem() {
     let [cartCount, setCartCount] = useState(0);
     let myuser;
+    let nav = useNavigate()
 
     let getUser = () => {
         try {
-          getCurrentUser().then((user) => {
+            getCurrentUser().then((user) => {
             myuser = user.data;
-        setCartCount(myuser['cart'].length)
-
-          })
+            setCartCount(myuser['cart'].length)
+          }).catch((error) => {nav('/login')})
         }
         catch (error) {
           console.log(error)

@@ -47,6 +47,7 @@ export function Register() {
             email: "",
             password: "",
             confpassword: "",
+            cart: []
         },
         validationSchema: registerSchema,
         onSubmit

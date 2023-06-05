@@ -20,19 +20,18 @@ export function Products() {
             let response = await productAPI.getAllProduct();
             setProducts(response.data);
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
-    let view = false;
 
 
     return (
         <div className='p-5 text-center text-ligh mt-5'>
-            { }<h2 className='text-dark fs-1 mb-5'>Choose From Our Selection</h2>
+           <h2 className='text-dark fs-1 mb-5'>Choose From Our Selection</h2>
             <div className="container-fluid ">
                 <div className="row w-75 mx-auto">
                     {products.map((product, index) => {
-                        return index >= 4 && <ProductCard key={product.id} product={product} show={view} className="border-5" />
+                        return index >= 4 && <ProductCard key={product.id} product={product}  className="border-5" />
                     })}
                 </div>
             </div>

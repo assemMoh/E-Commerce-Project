@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { productAPI } from '../API/productsAPI'
+import { getCurrentUser, productAPI } from '../API/productsAPI'
 import { CartProduct } from './CartProduct';
 
 
@@ -13,7 +13,7 @@ export function CartPageComponent() {
     let retrieveProduct = async () => {
         try {
             let all_prods = []
-            let currUser = await productAPI.getCurrentUser();
+            let currUser = await getCurrentUser();
             //console.log(currUser.data.cart)
             let currUserProdsArray = currUser.data.cart
             // console.log(currUserProdsArray)

@@ -7,7 +7,7 @@ export function FeaturedProds() {
     let [products, setProducts] = useState([]);
     useEffect(() => {
         retrieveProduct();
-    },);
+    }, []);
 
     let retrieveProduct = async () => {
         try {
@@ -22,7 +22,7 @@ export function FeaturedProds() {
         <div className='p-5 text-center text-ligh mt-5'>
             <h2 className='text-dark fs-1 mb-5'>Featured Products</h2>
             <div className="container-fluid text-center">
-                <div className="row w-75 m-auto">
+                <div className="row w-100 m-auto">
                     {products.map((product, index) => {
                         return index < 4 && <ProductCard key={product.id} product={product} show={view} className="border-5" />
                     })}
