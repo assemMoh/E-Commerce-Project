@@ -74,17 +74,17 @@ export function ProductsAdmin() {
                                     <td >
                                         <div className='row justify-content-evenly pt-5'>
                                             <span className='col-3'>
-                                                <NavLink className='' to={`/admin/panel/${product.id}`}>
+                                                <NavLink to={`/admin/panel/${product.id}`}>
                                                     <i className='fs-2 text-warning mx-1 bi bi-eye-fill'></i>
                                                 </NavLink>
                                             </span>
                                             <span className='col-3'>
-                                                <NavLink className='' to={`/admin/panel/${product.id}/edit`}>
+                                                <NavLink to={`/admin/panel/${product.id}/edit`}>
                                                     <i className='fs-2 text-warning bi bi-pencil-square'></i>
                                                 </NavLink>
                                             </span>
                                             <span className='col-3'>
-                                                <NavLink className='' onClick={() => deleteProduct(product.id)}>
+                                                <NavLink onClick={() => deleteProduct(product.id)}>
                                                     <i className='fs-2 text-danger bi bi-trash3-fill'></i>
                                                 </NavLink>
                                             </span>

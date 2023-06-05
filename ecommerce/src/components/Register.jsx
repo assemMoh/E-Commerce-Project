@@ -95,94 +95,80 @@ export function Register() {
 
 
   return (
-    <div className='my-5 p-5 w-75 m-auto bg-light'>
-        <form onSubmit={handleSubmit} autoComplete='off' >
-            <div className="mb-3 w-25">
-                <label for="username" >Username</label>
-                <input type="username" id="username"
-                value={values.username}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                onInput={checkUsername}
-                className={errors.username && touched.username ? "form-control border-danger" : "form-control"}
-                />
-                {takenUsername && <p className='text-danger'>this username is taken</p>}
-                {errors.username && touched.username && <label className='text-danger'>{errors.username}</label>}
-            </div>
+    <div className='container'>
+        <div className='row'>    
+            <div className='my-5 p-5 col-lg-10 col-md-10 col-12 m-auto bg-light'>
+                <form onSubmit={handleSubmit} autoComplete='off' >
+                    <div className="mb-3 w-25">
+                        <label for="username" >Username</label>
+                        <input type="username" id="username"
+                        value={values.username}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        onInput={checkUsername}
+                        className={errors.username && touched.username ? "form-control border-danger" : "form-control"}
+                        />
+                        {takenUsername && <p className='text-danger'>this username is taken</p>}
+                        {errors.username && touched.username && <label className='text-danger'>{errors.username}</label>}
+                    </div>
 
-            <div className="mb-3 w-50">
-                <label for="email" >Email</label>
-                <input type="email" id="email"
-                value={values.email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                className={errors.email && touched.email ? "form-control border-danger" : "form-control"}
-                />
-                {errors.email && touched.email && <label className='text-danger'>{errors.email}</label>}
-            </div>
-            
-            <div className="mb-3 w-25">
-                <label for="password" >Password</label>
-                <input type="password" id="password"
-                
-                value={values.password}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                className={errors.password && touched.password ? "form-control border-danger" : "form-control"}
-                />
-                {errors.password && touched.password && <label className='text-danger'>{errors.password}</label>}
-            </div>
+                    <div className="mb-3 w-50">
+                        <label for="email" >Email</label>
+                        <input type="email" id="email"
+                        value={values.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className={errors.email && touched.email ? "form-control border-danger" : "form-control"}
+                        />
+                        {errors.email && touched.email && <label className='text-danger'>{errors.email}</label>}
+                    </div>
+                    
+                    <div className="mb-3 w-25">
+                        <label for="password" >Password</label>
+                        <input type="password" id="password"
+                        
+                        value={values.password}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className={errors.password && touched.password ? "form-control border-danger" : "form-control"}
+                        />
+                        {errors.password && touched.password && <label className='text-danger'>{errors.password}</label>}
+                    </div>
 
-            <div className="mb-3 w-25">
-                <label for="confpassword" >Confirm Password</label>
-                <input type="password" id="confpassword"
-                
-                value={values.confpassword}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                className={errors.confpassword && touched.confpassword ? "form-control border-danger" : "form-control"}
-                />
-                {errors.confpassword && touched.confpassword && <label className='text-danger'>{errors.confpassword}</label>}
-            </div>
+                    <div className="mb-3 w-25">
+                        <label for="confpassword" >Confirm Password</label>
+                        <input type="password" id="confpassword"
+                        
+                        value={values.confpassword}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className={errors.confpassword && touched.confpassword ? "form-control border-danger" : "form-control"}
+                        />
+                        {errors.confpassword && touched.confpassword && <label className='text-danger'>{errors.confpassword}</label>}
+                    </div>
 
-            <div >
-                {
-                    registered && <p className='text-success'>Registrated successfully! You can login now</p>
-                }
-                {logged && <p className='text-warning'>Can't register while logged in</p>}
-                <button disabled={isSubmitting || logged} type="submit" className="btn btn-success w-25 text-center">Register</button>
-                {show &&  (<Spinner className='mx-3 ' animation="border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </Spinner>)}
-            </div>
-        </form>
+                    <div >
+                        {
+                            registered && <p className='text-success'>Registrated successfully! You can login now</p>
+                        }
+                        {logged && <p className='text-warning'>Can't register while logged in</p>}
+                        <button disabled={isSubmitting || logged} type="submit" className="btn btn-success w-25 text-center">Register</button>
+                        {show &&  (<Spinner className='mx-3 ' animation="border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </Spinner>)}
+                    </div>
+                </form>
 
-            
-            
-        <hr/>
-        <div className='container text-center'>
-                <label>
-                    Already has an account? <NavLink className='nav-link text-primary d-inline' to='/Login'> Login </NavLink>
-                </label>
+                    
+
+                <hr/>
+                <div className='container text-center'>
+                        <label>
+                            Already has an account? <NavLink className='nav-link text-primary d-inline' to='/Login'> Login </NavLink>
+                        </label>
+                </div>
+            </div>
         </div>
-
-
-        {/* <Modal.Dialog>
-            <Modal.Header closeButton>
-            <Modal.Title>Modal title</Modal.Title>
-            </Modal.Header>
-
-            <Modal.Body>
-            <p>Modal body text goes here.</p>
-            </Modal.Body>
-
-            <Modal.Footer>
-            <Button variant="secondary">Close</Button>
-            <Button variant="primary">Save changes</Button>
-            </Modal.Footer>
-        </Modal.Dialog> */}
-        
-
     </div>
   )
 }

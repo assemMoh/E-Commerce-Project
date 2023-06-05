@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import '../css/Login.css'
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { productAPI } from "../API/productsAPI";
+import { getCurrentAdmin, productAPI } from "../API/productsAPI";
 import { useNavigate } from "react-router-dom";
 
 // Creating schema
@@ -19,6 +19,7 @@ const schema = Yup.object().shape({
 export function LoginAdmin() {
     let navigate = useNavigate();
     let [admins, setAdmins] = useState([]);
+    let [signedIn, setSignedIn] = useState(false);
 
     let goToPanel = () => {
         navigate(
@@ -26,21 +27,32 @@ export function LoginAdmin() {
         )
     };
 
-useEffect(() => {
-    retrieveProduct();
-}, []);
+    useEffect(() => {
+        checkAdmin();
+    }, []);
 
-let retrieveProduct = async () => {
-    try {
-        let response = await productAPI.getAllAdmins();
-        setAdmins(response.data);
-    } catch (error) {
-        console.log(error);
+
+    let checkAdmin = async () => {
+        try{
+            await getCurrentAdmin().then((admin) => {setSignedIn(true)})
+            .catch(() => {retrieveAdmins()})
+        }catch(e){
+            console.log();
+        }
     }
-};
+    
+
+    let retrieveAdmins = async () => {
+        try {
+            let response = await productAPI.getAllAdmins();
+            setAdmins(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
 return (
-    <>
+    <div className="bg-dark">
         {/* Wrapping form inside formik tag and passing our schema to validationSchema prop */}
         <Formik
             validationSchema={schema}
@@ -50,7 +62,7 @@ return (
                 // Alert the input values of the form that we filled
                 // alert(JSON.stringify(values));
                 for (const admin of admins) {
-                    console.log((admins))
+                    // console.log((admins))
 
                     if (values['email'] === admin['email'] && values['password'] === admin['password']) {
                         console.log(admin)
@@ -68,14 +80,14 @@ return (
                 handleBlur,
                 handleSubmit,
             }) => (
-                <div className="text-center mt-5 p-5">
+                <div className="text-center text-light p-5">
                     <div className="m-auto w-50 text-start">
                         {/* Passing handleSubmit parameter tohtml form onSubmit property */}
                         <form noValidate onSubmit={handleSubmit}>
                             <h3>Admin login</h3>
                             {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
                             <div className="my-5">
-
+                                <p className="">Username</p>
                                 <input
                                     type="email"
                                     name="email"
@@ -93,6 +105,7 @@ return (
                             </div>
                             {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
                             <div className="my-5">
+                                <p className="">Password</p>
                                 <input
                                     type="password"
                                     name="password"
@@ -108,13 +121,16 @@ return (
                                 </p>
                             </div>
                             {/* Click on submit button to submit the form */}
-                            <button type="submit">Login</button>
+                            { signedIn && <p>Already admin is logged in</p>}
+                            <button 
+                            disabled={signedIn}
+                            className="btn btn-primary" type="submit">Login</button>
                         </form>
                     </div>
                 </div>
             )}
         </Formik>
-    </>
+    </div>
 );
 }
 

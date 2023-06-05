@@ -146,39 +146,65 @@
       "username": "assem",
       "email": "assem@asd.com",
       "password": "22qqA",
+      "cart": [
+        1
+      ],
       "id": 1
     },
     {
       "username": "mahmoud",
       "email": "mahmoud@gmail.com",
       "password": "22qqA",
+      "cart": [
+        1
+      ],
       "id": 2
     },
     {
       "username": "okay",
       "email": "okay@okay.com",
       "password": "2Assem",
+      "cart": [
+        1
+      ],
       "id": 3
     },
     {
       "username": "oh",
       "email": "oh@ho.com",
       "password": "33wwA",
+      "cart": [
+        1
+      ],
       "id": 4
     },
     {
       "username": "user",
       "email": "user@user.user",
       "password": "22qqA",
+      "cart": [
+        1
+      ],
       "id": 5
+    }
+  ],
+  "currentUser": [
+    {
+      "username": "assem",
+      "password": "22qqA",
+      "email": "assem@asd.com",
+      "cart": [
+        1
+      ],
+      "id": 1
     }
   ],
   "admins": [
     {
       "email": "root@root.com",
       "password": "root",
-      "signed": "off"
+      "id": 1
     }
   ],
-  "currentUser": []
+  "currentAdmin": []
 }

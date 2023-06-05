@@ -22,8 +22,8 @@ export function Login() {
             {
                 setTimeout(() => {
                     try{
-                        let {username, password, email} = user
-                        let userData = {username, password, email}
+                        let {username, password, email, cart} = user
+                        let userData = {username, password, email, cart}
                         loginUser(userData)
                         nav('/products')
                     }catch(e){
@@ -65,44 +65,49 @@ export function Login() {
     },[])
 
   return (
-    <div className='my-5 p-5 w-25 m-auto bg-light'>
-        <form autoComplete='off'>
-            <div className="mb-3">
-                <label for="username" >Username</label>
-                <input type="username" id="username"
-                value={values.username}
-                onChange={handleChange}
-                className="form-control"
-                />
-            </div>
+    <div className='container'>
+        <div className='row'>
+            <div className='my-5 p-5 col-lg-4 col-md-4 col-8 m-auto bg-light'>
+                <form autoComplete='off'>
+                    <div className="mb-3">
+                        <label for="username" >Username</label>
+                        <input type="username" id="username"
+                        value={values.username}
+                        onChange={handleChange}
+                        className="form-control"
+                        />
+                    </div>
 
 
-            <div className="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password"
-                value={values.password}
-                onChange={handleChange}
+                    <div className="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password"
+                        value={values.password}
+                        onChange={handleChange}
 
-                />
+                        />
+                    </div>
+                    
+                    
+                    <div className='container text-center'>
+                        {loginTrial && (<label className='text-danger my-3'>Invalid username or password</label>)}
+                        {logged && <p>Already Logged in</p>}
+                        <button onClick={checkIfFound}
+                        disabled={logged}
+                        className="btn btn-primary w-50 text-center">
+                            Login
+                        </button>
+                    </div>
+                    </form>
+                    <hr/>
+                    <div className='container text-center'>
+                            <label>
+                                Don't have an account? <NavLink className='nav-link text-primary d-inline' to='/register'> Register </NavLink>
+                            </label>
+                    </div>
             </div>
-            
-            
-            <div className='container text-center'>
-                {loginTrial && (<label className='text-danger my-3'>Invalid username or password</label>)}
-                {logged && <p>Already Logged in</p>}
-                <button onClick={checkIfFound}
-                disabled={logged}
-                className="btn btn-primary w-50 text-center">
-                    Login
-                </button>
-            </div>
-            </form>
-            <hr/>
-            <div className='container text-center'>
-                    <label>
-                        Don't have an account? <NavLink className='nav-link text-primary d-inline' to='/register'> Register </NavLink>
-                    </label>
-            </div>
+        </div>
+
     </div>
   )
 }

@@ -36,3 +36,7 @@ body {
 .inputError{
     border-color: rgb(255, 3, 3)
 }
+
+.slider img{
+    height: 550px;
+}

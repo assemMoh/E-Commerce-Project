@@ -1,6 +1,6 @@
 import './App.css';
 import { MyNavigation } from './components/MyNavigation'
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Outlet } from 'react-router-dom';
 import { HomeBody } from './pages/HomeBody';
 import Footer from './components/Footer';
 import { Products } from './pages/Products'
@@ -17,6 +17,9 @@ import { AboutPage } from './pages/AboutPage';
 import { ProductsPage } from './pages/ProductsPage';
 import { AboutPageUser } from './pages/AboutPageUser';
 import { ProductDetailsPage } from './pages/ProductDetailsPage';
+import { ProductsAdminPage } from './pages/ProductsAdminPage';
+import { ProductDetailsAdminPage } from './pages/ProductDetailsAdminPage';
+import { ProductFormPage } from './pages/ProductFormPage';
 
 
 
@@ -24,31 +27,31 @@ function App() {
   return (
     <div className="page-container ">
       <div className="content-wrap">
-        {/* <MyNavigation /> */}
-            <Routes>
-              
-              <Route path='/' element={<HomeBody />} />
-              <Route path='home' element={<HomeBody />} />
-              
-              <Route path='login' element={<LoginPage />} />
-              <Route path='register' element={<RegisterPage />} />
+        <Routes>
+          
+          <Route path='/' element={<HomeBody />} />
+          <Route path='home' element={<HomeBody />} />
+          
+          <Route path='login' element={<LoginPage />} />
+          <Route path='register' element={<RegisterPage />} />
 
-              <Route path='products' element={<ProductsPage />} />
-              <Route path='products/:id' element={<ProductDetailsPage />} />
+          <Route path='products' element={<ProductsPage />} />
+          <Route path='products/:id' element={<ProductDetailsPage />} />
 
-              <Route path='about' element={<AboutPage />} />
-              <Route path='aboutuser' element={<AboutPageUser />} />
-              
-              <Route path='admin' element={<LoginAdmin />} />
-              <Route path='admin/panel' element={<ProductsAdmin />} />
-              <Route path='admin/panel/:id' element={<ProductDetailsAdmin />} />
-              <Route path='admin/panel/:id/edit' element={<ProductForm />} />
-            
-              <Route path='*' element={<NotFound />} />
+          <Route path='about' element={<AboutPage />} />
+          <Route path='aboutuser' element={<AboutPageUser />} />
+          
 
-            </Routes>
-    </div>
+          <Route path='admin' element={<LoginAdmin />} />
+          <Route path='admin/panel' element={<ProductsAdminPage />} />
+          <Route path='admin/panel/:id' element={<ProductDetailsAdminPage />} />
+          <Route path='admin/panel/:id/edit' element={<ProductFormPage />} />
+        
+          <Route path='*' element={<NotFound />} />
+
+        </Routes>
     <Footer />
+    </div>
     </div>
   );
 }

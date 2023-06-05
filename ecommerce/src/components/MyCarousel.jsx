@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 export function MyCarousel() {
     return (
         <div className="col-12">
-            <Carousel className="col-12">
+            <Carousel className="col-12 slider">
                 <Carousel.Item>
                     <img
                         className="d-block carousel-img "
