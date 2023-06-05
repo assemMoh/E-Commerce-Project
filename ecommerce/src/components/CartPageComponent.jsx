@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { ProductCard } from '../components/ProductCard'
 import { productAPI } from '../API/productsAPI'
+import { CartProduct } from './CartProduct';
 
 
-export function Products() {
+export function CartPageComponent() {
 
     let [products, setProducts] = useState([]);
     useEffect(() => {
@@ -22,12 +22,12 @@ export function Products() {
 
 
     return (
-         <div className='p-5 text-center text-ligh mt-5'>
-            {}<h2 className='text-dark fs-1 mb-5'>Choose From Our Selection</h2>
+        <div className='p-5 text-center text-ligh mt-5'>
+            <h1 className='text-center "border-bottom"'>Your Cart Items</h1>
             <div className="container-fluid ">
                 <div className="row mx-auto">
                     {products.map((product, index) => {
-                        return index >= 4 && <ProductCard key={product.id} product={product} show={view} className="border-5" />
+                        return <CartProduct key={product.id} product={product} show={view} className="border-5" />
                     })}
                 </div>
             </div>

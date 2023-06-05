@@ -23,17 +23,17 @@ export function ProductDetails() {
   let backToProducts = () => {
     navigate(
       '/products'
-    )  }
+    )
+  }
 
 
-    if (product == []) {
+  if (product == []) {
     navigate(
       '/products'
     )
     return <NotFound />
   }
 
-  
   return (
     <div className=' p-5 text-center'>
 
