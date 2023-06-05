@@ -191,31 +191,7 @@
       "id": 5
     }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "currentUser": [
-    {
-      "username": "assem",
-      "password": "22qqA",
-      "email": "assem@asd.com",
-      "cart": [
-        1,
-        13,
-        19,
-        16,
-        8,
-        7,
-        7
-      ],
-      "id": 1
-    }
-  ],
-=======
   "currentUser": [],
->>>>>>> 677ee2c273ba5b5a58eceed65b4b83cfa2457de1
-=======
-  "currentUser": [],
->>>>>>> 677ee2c273ba5b5a58eceed65b4b83cfa2457de1
   "admins": [
     {
       "email": "root@root.com",
