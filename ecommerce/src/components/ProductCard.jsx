@@ -47,13 +47,15 @@ import { useEffect } from 'react'
 
 export function ProductCard(props) {
   let { product } = props
-  let [myuser, setMyUser] = useState({})
+  // let [myuser, setMyUser] = useState({})
+  let myuser
 
   let getUser = () => {
     try {
       getCurrentUser().then((user) => {
         console.log(user.data)
         // console.log(myuser)
+        myuser = user.data;
       })
     }
     catch (error) {
@@ -81,13 +83,15 @@ export function ProductCard(props) {
       let newcart =  [...myuser.id, productId]
       console.log(newcart)
 
-      myuser.cart = newcart;
       console.log(myuser.id);
       console.log(myuser.cart);
 
       //addProductToCart(myuser.id, myuser)
 
       // // myuser['cart'] = [...myuser['cart'], productId]
+      // let newcart =  [...myuser['cart'], productId]
+      myuser['cart'] = newcart;
+      addProductToCart(myuser['id'], myuser)
     }
     catch (error) {
       console.log(error)
@@ -104,9 +108,9 @@ export function ProductCard(props) {
             Price : {'$' + product.price}
           </Card.Text>
           <Card.Text className='text-dark'>
-            <p className={product.quantity === 0 ? "text-danger" : product.quantity === 1 ? "text-primary" : ""} >
+            <span className={product.quantity === 0 ? "text-danger" : product.quantity === 1 ? "text-primary" : ""} >
               {product.quantity === 1 ? 'Only One Item Left' : product.quantity === 0 ? 'Out Of Stock' : `Quantity available: ${product.quantity}`}
-            </p>
+            </span>
           </Card.Text>
           {product.quantity === 0 ? (<i className="mx-5 fs-2 bi bi-eye-fill ms-1 disabled cardicon" />)
             : (<NavLink to={`/products/${product.id}`}>

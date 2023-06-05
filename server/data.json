@@ -144,10 +144,13 @@
   "users": [
     {
       "username": "assem",
-      "email": "assem@asd.com",
       "password": "22qqA",
+      "email": "assem@asd.com",
       "cart": [
-        1
+        1,
+        13,
+        19,
+        16
       ],
       "id": 1
     },

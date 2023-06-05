@@ -70,7 +70,7 @@ export function Login() {
             <div className='my-5 p-5 col-lg-4 col-md-4 col-8 m-auto bg-light'>
                 <form autoComplete='off'>
                     <div className="mb-3">
-                        <label for="username" >Username</label>
+                        <label htmlFor="username" >Username</label>
                         <input type="username" id="username"
                         value={values.username}
                         onChange={handleChange}
@@ -78,9 +78,8 @@ export function Login() {
                         />
                     </div>
 
-
                     <div className="mb-3">
-                        <label for="password" class="form-label">Password</label>
+                        <label htmlFor="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password"
                         value={values.password}
                         onChange={handleChange}

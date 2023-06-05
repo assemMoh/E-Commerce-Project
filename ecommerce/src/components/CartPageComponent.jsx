@@ -12,8 +12,17 @@ export function CartPageComponent() {
 
     let retrieveProduct = async () => {
         try {
-            let response = await productAPI.getAllProduct();
-            setProducts(response.data);
+            let all_prods = []
+            let currUser = await productAPI.getCurrentUser();
+            //console.log(currUser.data.cart)
+            let currUserProdsArray = currUser.data.cart
+            // console.log(currUserProdsArray)
+            for (const element of currUserProdsArray) {
+                const product = await productAPI.getProduct(element);
+                all_prods.push(product.data);
+            }
+            setProducts(all_prods);
+            console.log(products)
         } catch (error) {
             console.log(error);
         }

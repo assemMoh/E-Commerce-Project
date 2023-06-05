@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Nike Trainers",
       "price": 850,
-      "quantity": 5,
+      "quantity": "1",
       "src": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
@@ -141,8 +141,70 @@
       "src": "https://images.pexels.com/photos/4065148/pexels-photo-4065148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ],
-  "admins": {
-    "username": "root@root.com",
-    "password": "root"
-  }
+  "users": [
+    {
+      "username": "assem",
+      "email": "assem@asd.com",
+      "password": "22qqA",
+      "cart": [
+        1
+      ],
+      "id": 1
+    },
+    {
+      "username": "mahmoud",
+      "email": "mahmoud@gmail.com",
+      "password": "22qqA",
+      "cart": [
+        1
+      ],
+      "id": 2
+    },
+    {
+      "username": "okay",
+      "email": "okay@okay.com",
+      "password": "2Assem",
+      "cart": [
+        1
+      ],
+      "id": 3
+    },
+    {
+      "username": "oh",
+      "email": "oh@ho.com",
+      "password": "33wwA",
+      "cart": [
+        1
+      ],
+      "id": 4
+    },
+    {
+      "username": "user",
+      "email": "user@user.user",
+      "password": "22qqA",
+      "cart": [
+        1
+      ],
+      "id": 5
+    }
+  ],
+  "currentUser": [
+    {
+      "username": "assem",
+      "password": "22qqA",
+      "email": "assem@asd.com",
+      "cart": [
+        1
+      ],
+      "id": 1
+    }
+  ],
+  "admins": [
+    {
+      "email": "root@root.com",
+      "password": "root",
+      "id": 1
+    }
+  ],
+  "currentAdmin": []
 }
