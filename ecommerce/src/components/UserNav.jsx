@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Container, Navbar, Spinner } from 'react-bootstrap'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { CartItem } from './CartItem'
-import { getCurrentUser, logoutUser } from '../API/productsAPI'
+import { getCurrentAdmin, getCurrentUser, logoutUser } from '../API/productsAPI'
 
 export function UserNav() {
 
@@ -32,6 +32,8 @@ export function UserNav() {
             console.log(e)
         }
     }
+
+
 
     useEffect(() => {
         checkUser()

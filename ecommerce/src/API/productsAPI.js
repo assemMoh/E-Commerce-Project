@@ -27,20 +27,22 @@ export let productAPI = {
 	getAllAdmins,
 };
 
-
 let usersURL = "http://localhost:3005/users";
 
 export let registerUser = (newUser) => axios.post(`${usersURL}`, newUser)
 export let getUsers = () => axios.get(usersURL)
-
 
 let currentUserURL = "http://localhost:3005/currentUser";
 export let loginUser = (currentUser) => axios.post(currentUserURL, currentUser)
 export let getCurrentUser = () => axios.get(currentUserURL + "/1")
 export let logoutUser = (currentUser) => axios.delete(currentUserURL + "/1", currentUser)
 
-
 let currentAdminURL = "http://localhost:3005/currentAdmin";
 export let loginAdmin = (currentAdmin) => axios.post(currentAdminURL, currentAdmin)
 export let getCurrentAdmin = () => axios.get(currentAdminURL + "/1")
 export let logoutAdmin = (currentAdmin) => axios.delete(currentAdminURL + "/1", currentAdmin)
+
+
+
+// export let changeUserCart = (newUser) 			=>	axios.put(usersURL + "/1", newUser)
+// export let addProductToCart = (userID, newUser) => 	axios.put(`${currentUserURL}/${userID}`, newUser)

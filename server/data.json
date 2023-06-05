@@ -188,7 +188,17 @@
       "id": 5
     }
   ],
-  "currentUser": [],
+  "currentUser": [
+    {
+      "username": "assem",
+      "password": "22qqA",
+      "email": "assem@asd.com",
+      "cart": [
+        1,2
+      ],
+      "id": 1
+    }
+  ],
   "admins": [
     {
       "email": "root@root.com",

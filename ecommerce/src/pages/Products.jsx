@@ -7,9 +7,14 @@ import { useNavigate } from 'react-router-dom';
 export function Products() {
 
     let [products, setProducts] = useState([]);
+    let [test, setTest] = useState(1);
     useEffect(() => {
         retrieveProduct();
     }, []);
+
+    let changeTest = () => {
+        
+    }
 
     let retrieveProduct = async () => {
         try {
