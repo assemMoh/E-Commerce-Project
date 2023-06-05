@@ -18,14 +18,6 @@ let editProduct = (productId, product) =>
 
 let getAllAdmins = () => axios.get(adminURL);
 
-export let productAPI = {
-	getAllProduct,
-	addProduct,
-	deleteProduct,
-	editProduct,
-	getProduct,
-	getAllAdmins,
-};
 
 
 let usersURL = "http://localhost:3005/users";
@@ -44,3 +36,13 @@ let currentAdminURL = "http://localhost:3005/currentAdmin";
 export let loginAdmin = (currentAdmin) => axios.post(currentAdminURL, currentAdmin)
 export let getCurrentAdmin = () => axios.get(currentAdminURL + "/1")
 export let logoutAdmin = (currentAdmin) => axios.delete(currentAdminURL + "/1", currentAdmin)
+
+export let productAPI = {
+	getAllProduct,
+	addProduct,
+	deleteProduct,
+	editProduct,
+	getProduct,
+	getAllAdmins,
+	getCurrentUser,
+};

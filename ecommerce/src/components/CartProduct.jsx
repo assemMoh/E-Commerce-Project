@@ -5,11 +5,12 @@ import '../css/CartProd.css'
 
 export function CartProduct(props) {
     const { product } = props;
+    console.log(props)
 
     return (
-        <div className='col-sm-12 col-md-12 col-lg-10  mx-auto '>
+        <div className=' col-sm-12 col-md-12 col-lg-9  mx-auto '>
             <Card className='border border-4 shadow-lg cartprodcard mt-4'>
-                <Card.Body className='row'>
+                <Card.Body className='row cartCardbody'>
 
                     <div className='col-md-6 col-sm-3' >
                         <Card.Img className='img-card col-sm-12 col-md-12' variant="top" src={product.src} id='cart-img-card' />
