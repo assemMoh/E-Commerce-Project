@@ -17,7 +17,6 @@ export function UserNav() {
         setTimeout(() => {
             logoutUser(currentUser)
             setLoggingOut(false)
-            
             nav('/home')
         }, 1000);
     }

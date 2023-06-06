@@ -139,6 +139,13 @@
       "price": 200,
       "quantity": 12,
       "src": "https://images.pexels.com/photos/4065148/pexels-photo-4065148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "name": "Vans",
+      "price": "100",
+      "quantity": "3",
+      "src": "https://img01.ztat.net/article/spp-media-p1/6ee6f696c91f4603a2549060178b6150/71fb6823b91e44b9bd9175de35ac1012.jpg?imwidth=1800",
+      "id": 21
     }
   ],
   "users": [
@@ -150,7 +157,9 @@
         1,
         13,
         19,
-        16
+        16,
+        9,
+        11
       ],
       "id": 1
     },
@@ -196,6 +205,13 @@
       "password": "22qqA",
       "cart": [],
       "id": 6
+    },
+    {
+      "username": "kareem",
+      "email": "kareem@gmail.com",
+      "password": "22qqA",
+      "cart": [],
+      "id": 7
     }
   ],
   "currentUser": [],
@@ -206,11 +222,5 @@
       "id": 1
     }
   ],
-  "currentAdmin": [
-    {
-      "email": "root@root.com",
-      "password": "root",
-      "id": 1
-    }
-  ]
+  "currentAdmin": []
 }

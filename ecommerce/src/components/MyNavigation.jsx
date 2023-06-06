@@ -15,10 +15,10 @@ export function MyNavigation() {
 
     setTimeout(() => {
         logoutUser(currentUser)
+        setLogged(false)
         // nav('/home')
-    }, 500);
-    
-}
+    }, 500);  
+  }
 
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export function MyNavigation() {
     }catch(e){
 
     }
-  })
+  }, [])
 
   return (
 

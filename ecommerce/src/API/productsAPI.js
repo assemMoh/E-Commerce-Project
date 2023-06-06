@@ -24,13 +24,9 @@ const currentUserURL = "http://localhost:3005/currentUser";
 const usersURL = "http://localhost:3005/users";
 // export let changeUserCart = (newUser) =>axios.put(`${usersURL}/${userID}`, newUser)
 
-export const changeUserCart = (userID, newUser) => {
-  return axios.put(`${usersURL}/${userID}`, newUser);
-};
+export const changeUserCart = (userID, newUser) => axios.put(`${usersURL}/${userID}`, newUser)
 
-export const addProductToCart = (userID, newUser) => {
-  return axios.put(`${currentUserURL}/${userID}`, newUser);
-};
+export const addProductToCart = (userID, newUser) => axios.put(`${currentUserURL}/${userID}`, newUser);
 
 export let getUserCart = (userID) => axios.get(`${usersURL}/${userID}/cart`)
 
